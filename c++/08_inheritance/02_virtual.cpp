@@ -1,3 +1,16 @@
+/**
+ * @file 02_virtual.cpp
+ * @author Alberto Sartori
+ * @brief dynamic binding
+ * @version 0.1
+ * @date 2021-11-22
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * mark virtual the function that is override by childrens
+ * pure virtual function ==> abstract class(line 26)
+ * non posso istanziare l'elemento animale
+ */
 #include <ap_error.hpp>
 #include <iostream>
 

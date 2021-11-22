@@ -1,3 +1,14 @@
+/**
+ * @file 01_inheritance.cpp
+ * @author Alberto Sartori
+ * @brief 
+ * @version 0.1
+ * @date 2021-11-22
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * dog and snake inherints from animal
+ */
 #include "ap_error.hpp"
 #include <iostream>
 
@@ -17,12 +28,14 @@ struct Animal {
   }
 };
 
+//dog is an animal -> la classe snake (children class) eredita tutte le caratteristiche della classe "madre"(parent class) animale
 struct Dog : public Animal {
   void speak() const noexcept { std::cout << "Bau\n"; }
   Dog() noexcept = default;
   Dog(const unsigned int a, const double d) : Animal{a, d} {}
 };
 
+//snake is an animal -> la classe snake eredita tutte le caratteristiche della classe "madre" animale
 struct Snake : public Animal {
   bool dangerous;
   Snake(const unsigned int a, const double w, const bool b)
@@ -36,6 +49,10 @@ struct Snake : public Animal {
 };
 
 // run-time (dynamic) polymorphism
+// print_animal acept an reference to an animal class, and run-time we passa not an animal but a dog a snake 
+// a function that accept a parent class accept all the children class, no more TEMPLATE
+// remember thta dynamic polymorphism accept only references or pointers
+// to works miss the dynamic binding
 void print_animal(const Animal& a) noexcept {
   std::cout << "through ref\n";
   a.info();

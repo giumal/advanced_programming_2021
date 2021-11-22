@@ -1,8 +1,22 @@
+/**
+ * @file 00_first_trial.cpp
+ * @author Alberto Sartori 
+ * @brief 
+ * @version 0.1
+ * @date 2021-11-22
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * A type is a particolar implementation of a concept. 
+ * 
+ */
 #include <iostream>
 
 // each animal has an age and a weight and must implement
 // void info()
 // void speak()
+// this is not optimal from the conceptual point of view because Snake has an Animal varible
+// but snake is an animal
 
 struct Animal {
   unsigned int age;
